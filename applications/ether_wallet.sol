@@ -13,7 +13,7 @@ contract EtherWallet {
     }
 
     function withdraw(uint amount) public {
-        require(msg.sender == owner, "caller is not owner");
+        require(msg.sender == owner, "msg.sender is not owner");
         payable(msg.sender).transfer(amount);
     }
 
